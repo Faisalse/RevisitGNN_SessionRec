@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>RecSys '25, Prague, Czech Republic</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+		<style>
+			.box {
+				max-width: 1200px;
+				width: 90%;
+				margin: 80px auto 0 auto;
+				padding: 0px;
+				text-align: center;
+				}
+		  </style>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Logo -->
+					    <h2 style="font-size: 30px; color: rgb(15, 89, 89);">ACM RecSys '25, Prague, Czech Republic</h2>
+						<h3 style="font-size: 28px;">Revisiting the Performance of Graph Neural Networks for
+							Session-based Recommendation</h3>
+						
+
+						<h4 style="font-size: 18px;">Additional material: Source code, Datasets, Hyperparameter ranges, Optimal hyperparameter values per dataset and Additional results</h4>
+							<nav id="nav" style="font-weight: bold;">
+								<ul>
+								  <li><a href="index.html">Home</a></li>
+							      <li><a href="#" data-load="results.html">Results</a></li>
+								  <li><a href="#" data-load="hyperparameters.html">Hyperparameter tuning</a></li>
+								  <li><a href="#" data-load="paper_analysis.html">Analysis of considered GNN models</a></li>
+								</ul>
+							</nav>
+				</div>
+            
+			<!-- Banner -->
+				<div class="box">
+					
+						<p align="justify">Graph Neural Networks (GNNs) have shown impressive performance in various domains. Motivated by this success, several GNN-based session-based recommender systems (SBRS) have been proposed over the past few years. The literature suggests that these
+							algorithms can achieve strong performance and outperform well established baseline neural models. However, some recent reproducibility studies suggest that the performance achieved by more
+							complex GNN-based models may sometimes be overstated and that these models may not be as impactful as expected. Moreover, an
+							inconsistent choice of datasets, preprocessing steps, and evaluation protocols across published works makes it difficult to reliably assess
+							progress in the field. In this present study, we reassess the performance of three well-established baseline models—GRU4Rec, NARM,
+							and STAMP—and compare them to six more recent GNN-based SBRS within a standardized evaluation framework. Experiments
+							on commonly used datasets for SBRS reveal that in particular the GRU4Rec model, if properly tuned, is still highly competitive and leads to the best results on two out of three datasets. Furthermore,
+							we find that the performance of the GNN-based models varies largely across datasets. Interestingly, only the quite early SR-GNN
+							model turns out to be superior in terms of accuracy metrics on one of the datasets. Overall, we speculate that the reasons for our
+							surprising result may lie in insufficient hyperparameter tuning processes for the baselines in the original papers.
+						</p>
+                            
+							
+						<a href="https://github.com/RecSysEvaluation/RecSys_Evaluation" class="icon brands fa-github" style="font-weight: bold;">  GitHub: Source code and datasets</a>
+				</div>
+
+				<div class="box" id="table-placeholder"></div>
+
+				<script>
+					document.addEventListener("DOMContentLoaded", () => {
+						document.querySelectorAll('a[data-load]').forEach(link => {
+						link.addEventListener('click', function(event) {
+							event.preventDefault(); // Stop default navigation
+							const file = this.getAttribute('data-load');
+							fetch(file)
+							.then(response => response.text())
+							.then(data => {
+								document.getElementById("table-placeholder").innerHTML = data;
+							})
+							.catch(error => {
+								console.error("Error loading content:", error);
+								document.getElementById("table-placeholder").innerHTML = "<p>Error loading content.</p>";
+							});
+						});
+						});
+					});
+				</script>
+        <!--
+        <div class="box">
+		<footer style="background-color:#f4f4f4; padding: 20px; margin-top: 40px; text-align: center; border-top: 1px solid #ccc;">
+			<h3 style="margin-bottom: 10px; color: #333;">Reproducibility in Deep Learning</h3>
+			<p style="font-style: italic; color: #555;">"Reproducing deep learning results is often harder than creating them." – <strong>Anonymous ML Researcher</strong></p>
+			<p style="font-style: italic; color: #555;">"A model is only as trustworthy as its ability to be replicated and understood." – <strong>Yann LeCun</strong></p>
+			<p style="font-style: italic; color: #555;">"Reproducibility isn't just good science—it's a requirement for real-world deployment of deep learning systems." – <strong>Ian Goodfellow</strong></p>
+			<p style="font-style: italic; color: #555;">"When code, data, and hyperparameters are hidden, claims become speculation." – <strong>NeurIPS Reproducibility Chair</strong></p>
+			
+		</footer>
+		-->
+	</div>
+
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

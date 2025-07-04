@@ -1,0 +1,207 @@
+<style>
+	.box {
+	  width: 1200px;        
+	  margin: 80px auto 0 auto;
+	  padding: 0px;
+	  text-align: center;
+	}
+		td {
+			border: 1px solid #ffffff;
+			padding: 12px;
+			text-align: center;
+			}
+
+		th {
+			background-color: #102E50;
+			color: #e6dcdc;
+			font-weight: bold;
+			}
+
+		tr:nth-child(even) {
+			background-color: #f9f9f9;
+			}
+
+		tr:hover {
+			background-color: #e0f7fa;
+			}
+
+		.table-responsive {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		}
+
+		table {
+		width: 100%;
+		border-collapse: collapse;
+		margin: 20px auto;
+		color: #333;
+		min-width: 600px;
+		}
+</style>
+
+
+<div class="box">
+
+	<p>
+		<h3>Hyperparameter ranges</h3>
+	</p>
+	
+	<table class="table-bordered table-striped table-sm table-hover" style="line-height: 1.6;">
+		<tbody>
+		<tr>
+			<th>Parameter</th>
+			<th>Ranges</th>
+		</tr>
+		<tr>
+			<td align="right">Learning Rate</td>
+			<td align="right" align="right">[0.0001 to 0.01]</td>
+		</tr>
+		<tr>
+			<td align="right">Batch Size</td>
+			<td align="right" align="right">[20, 32, 50, 64, 100, 128, 256, 300, 512]</td>
+		</tr>
+
+	</tr>
+	<tr>
+		<td align="left">Batch Size (GCEGNN)</td>
+		<td align="right" align="right">[4, 6, 8, 12, 16]</td>	
+		
+	</tr>
+
+
+	<tr>
+			<td align="right">Embedding Size</td>
+			<td align="right" align="right">[20, 50, 64, 100, 120, 150, 200, 300]</td>
+	</tr>	
+	<tr>
+			<td align="left">L<sub>2</sub> Penality</td>
+			<td align="right" align="right">[0.00001, 0.0001]</td>
+	</tr>
+
+	<tr>
+		<td align="left">Dropout</td>
+		<td align="right" align="right">[0, 1]</td>
+    </tr>
+		
+	<tr>
+			<td align="right">Epoch</td>
+			<td align="right" align="right">[10, 15, 20, 30, 50]</td>
+	</tr>
+		
+	</tbody>
+</table>
+
+<p>
+	<h3>Hyperparameter ranges for GRU4Rec model</h3>
+</p>
+
+<table class="table-bordered table-striped table-sm table-hover" style="line-height: 1.6;">
+	<tbody>
+	<tr>
+		<th>Parameter</th>
+		<th>Ranges</th>
+		
+	</tr>
+
+	<tr>
+		<td align="right">Layers</td>
+		<td align="right" align="right">[64 to 512] (step=32)</td>
+	</tr>
+
+	<tr>
+		<td align="right">Batch Size</td>
+		<td align="right" align="right">[32 to 256] (step=16)</td>
+		
+	</tr>
+
+	<tr>
+		<td align="right">Learning Rate</td>
+		<td align="right" align="right">[0.01 to 0.25] (step=0.005)</td>
+		
+	</tr>
+
+	<tr>
+		<td align="right">Dropout_p_embed</td>
+		<td align="right" align="right">[0.0 to 0.5] (step=0.05)</td>
+		
+	</tr>
+
+	<tr>
+		<td align="right">Dropout_p_hidden</td>
+		<td align="right" align="right">[0.01 to 0.7] (step=0.05)</td>
+		
+	</tr>
+
+	<tr>
+		<td align="right">Momentum</td>
+		<td align="right" align="right">[0 to 0.9] (step=0.05)</td>
+	</tr>
+
+	<tr>
+		<td align="right">Sample_alpha</td>
+		<td align="right" align="right">[0 to 1.0] (step=0.05)</td>
+	</tr>
+
+	<tr>
+		<td align="right">Epoch</td>
+		<td align="right" align="right">[10, 15, 20]</td>
+	</tr>
+
+
+	
+	
+
+
+	
+</tbody>
+</table>
+<h3>Optimal hyperparameter values</h3>
+<h4>RSC15</h4>
+
+<ol align = "left">
+	<li>GRU4Rec-epoch=10-loss=bpr-max-constrained_embedding=True-embedding=0-elu_param=0-layers=64-batch_size=32-dropout_p_embed=0.5-dropout_p_hidden=0.35-learning_rate=0.095-momentum=0.2-n_sample=2048-sample_alpha=0.25-bpreg=0-logq=1</li>
+	<li>NARM-epoch=50-learning_rate=0.0003-l2=0.00012-embedding_size=100-batch_size=64</li>
+	<li>STAMP-epochs=30-decay_rate=0-learning_rate=0.0004</li>
+	<li>COTREC-epoch=30-learning_rate=0.001-batch_size=50-embedding_size=64-l2=1e-05</li>
+	<li>FLCSP-epoch=15-learning_rate=0.0005-batch_size=300-embedding_size=50-hidden_size=100-dropout=0.2-l2=1e-05</li>
+	<li>GCEGNN-epoch=10-learning_rate=0.0003-batch_size=8-embedding_size=32-dropout=0.3-l2=0.0001</li>
+	<li>GNRRW-epoch=30-learning_rate=0.00889-batch_size=80-embedding_size=32-l2=1e-05</li>
+	<li>SRGNN-epoch=15-learning_rate=0.0005-batch_size=300-embedding_size=50-l2=1e-05</li>
+	<li>TAGNN-epoch=10-learning_rate=0.001-batch_size=128-embedding_size=100-l2=1e-05</li>
+</ol>
+
+<h4>DIGI</h4>
+<ol align = "left">
+	<li>GRURec-epoch=15-loss=bpr-max-constrained_embedding=True-embedding=0-elu_param=1-layers=512-batch_size=128-dropout_p_embed=0.5-dropout_p_hidden=0.3-learning_rate=0.05-momentum=0.15-n_sample=2048-sample_alpha=0.3-bpreg=0.9-logq=0</li>
+	<li>NARM-epoch=50-learning_rate=0.0005-l2=0.0007-embedding_size=128-batch_size=300</li>
+	<li>STAMP-epochs=10-decay_rate=0.4-learning_rate=0.001</li>
+	<li>COTREC-epoch=10-learning_rate=0.009-batch_size=128-embedding_size=50-l2=1e-05</li>
+	<li>FLCSP-epoch=15-learning_rate=0.001-batch_size=100-embedding_size=50-hidden_size=100-dropout=0.1-l2=1e-05</li>
+	<li>GCEGNN-epoch=4-learning_rate=0.001-batch_size=20-embedding_size=50-l2=0.0001</li>
+	<li>GNRRW-epoch=10-learning_rate=0.0045-batch_size=200-embedding_size=16-l2=1e-05</li>
+	<li>SRGNN-epoch=10-learning_rate=0.006-batch_size=128-embedding_size=100-l2=0.0003</li>
+	<li>TAGNN-epoch=20-learning_rate=0.0007-batch_size=100-embedding_size=100-l2=1e-05</li>
+</ol>
+
+<h4>RETAIL</h4>
+<ol align = "left">
+	<li>GRU4Rec-epoch=15-loss=bpr-max-constrained_embedding=True-embedding=0-elu_param=0.5-layers=480-batch_size=192-dropout_p_embed=0.0-dropout_p_hidden=0.15-learning_rate=0.045-momentum=0.5-n_sample=2048-sample_alpha=0.0-bpreg=1.95-logq=0</li>
+	<li>NARM-epoch=19-learning_rate=0.0008-l2=0.00045-embedding_size=300-batch_size=256</li>
+	<li>STAMP-n_epochs=30-decay_rate=0.4-lr=0.0008</li>
+	<li>COTREC-epoch=20-learning_rate=0.003-batch_size=100-embedding_size=80-l2=0.0001</li>
+	<li>FLCSP-epoch=20-learning_rate=0.0004-batch_size=256-embedding_size=100-hidden_size=150-dropout=0.2-l2=1e-05</li>
+	<li>GCEGNN-epoch=12-learning_rate=0.0005-batch_size=8-embedding_size=60-dropout=0.5-l2=0.0001</li>
+	<li>GNRRW-epoch=10-learning_rate=0.0045-batch_size=200-embedding_size=16-l2=1e-05</li>
+	<li>SRGNN-epoch=15-learning_rate=0.004-batch_size=256-embedding_size=150-l2=1e-05</li>
+	<li>TAGNN-epoch=20-learning_rate=0.0003-batch_size=100-embedding_size=100-l2=1e-05</li>
+</ol>
+	
+		  
+</div>
+
+	  
+</div>	
+	
+		
+
+		

@@ -1,0 +1,5 @@
+	short_sessions	medium_sessions	long_sessions
+gru4rec	0.394	0.301	0.235
+narm	0.38	0.288	0.204
+gnrrw	0.382	0.303	0.229
+srgnn	0.368	0.283	0.216

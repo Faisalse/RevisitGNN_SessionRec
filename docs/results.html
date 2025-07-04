@@ -1,0 +1,614 @@
+<style>
+	.box {
+	  width: 1200px;        
+	  margin: 80px auto 0 auto;
+	  padding: 0px;
+	  text-align: center;
+	}
+		td {
+			border: 1px solid #ffffff;
+			padding: 12px;
+			text-align: center;
+			}
+
+		th {
+			background-color: #102E50;
+			color: #e6dcdc;
+			font-weight: bold;
+			}
+
+		tr:nth-child(even) {
+			background-color: #f9f9f9;
+			}
+
+		tr:hover {
+			background-color: #e0f7fa;
+			}
+
+		.table-responsive {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		}
+
+		table {
+		width: 100%;
+		border-collapse: collapse;
+		margin: 20px auto;
+		color: #333;
+		min-width: 600px; /* Ensures table doesn't collapse too much on small screens */
+		}
+</style>
+
+
+<div class="box">
+
+	<h1>Results</h1>
+	<div class="table-responsive">
+		<table class="table-bordered table-striped table-sm table-hover" style="line-height: 1.6;">
+			<thead>
+				<tr>
+					<th>Metrics</th>
+					<th>MRR@1</th>
+					<th>MRR@10</th>
+					<th>MRR@20</th>
+					<th>HitRate@1</th>
+					<th>HR@10</th>
+					<th>HR@20</th>
+					<th>Cov@20</th>
+					<th>Pop@20</th>
+					<th>T-time (s)</th>
+					<th>P-time (s)</th>
+				</tr>
+			</thead>
+			<tbody>
+                <tr>
+                   
+					<td colspan="11"><b>RSC15</b></td>
+				</tr>
+
+				<tr>
+					<td>GRU4Rec</td>
+					<td style="font-weight: bold;">0.197</td>
+					<td style="font-weight: bold;">0.313</td>
+					<td style="font-weight: bold;">0.318</td>
+					<td style="font-weight: bold;">0.197</td>
+					<td style="font-weight: bold;">0.576</td>
+					<td style="font-weight: bold;">0.653</td>
+					<td style="text-decoration: underline;">0.701</td>
+					<td>0.059</td>
+					<td style="text-decoration: underline;">201.322</td>
+					<td>0.012</td>
+				</tr>
+
+				<tr>
+					<td>COTREC</td>
+					<td style="text-decoration: underline;">0.190</td>
+					<td style="text-decoration: underline;">0.306</td>
+					<td style="text-decoration: underline;">0.312</td>
+					<td style="text-decoration: underline;">0.190</td>
+					<td style="text-decoration: underline;">0.570</td>
+					<td style="text-decoration: underline;">0.645</td>
+					<td>0.669</td>
+					<td>0.056</td>
+					<td>5693.969</td>
+					<td>0.453</td>
+				</tr> 
+
+				<tr>
+					<td>NARM</td>
+					<td>0.189</td>
+					<td>0.294</td>
+					<td >0.299</td>
+					<td>0.189</td>
+					<td>0.523</td>
+					<td>0.588</td>
+					<td>0.569</td>
+					<td style="text-decoration: underline;">0.073</td>
+					<td>1032.799</td>
+					<td>0.010</td>
+				</tr>
+
+				<tr>
+					<td>GNRRW</td><td>0.182</td><td>0.283</td><td>0.289</td><td>0.182</td><td>0.517</td><td>0.596</td><td style="font-weight: bold;">0.779</td><td>0.066</td><td>1309.388</td><td>0.020</td>
+				</tr> 
+
+				<tr>
+					<td>SRGNN</td><td>0.182</td><td>0.252</td><td>0.255</td><td>0.182</td><td>0.401</td><td>0.447</td><td>0.460</td><td style="font-weight: bold;">0.120</td><td>1612.444</td><td>0.019</td>
+				</tr>
+
+				
+				
+				<tr>
+					<td>GCEGNN</td><td>0.179</td><td>0.290</td><td>0.296</td><td>0.179</td><td>0.556</td><td>0.638</td><td>0.526</td><td>0.071</td><td>20456.915</td><td>1.033</td>
+				</tr>
+
+				<tr>
+					<td>STAMP</td>
+					<td>0.169</td>
+					<td>0.275</td>
+					<td>0.280</td>
+					<td>0.169</td>
+					<td>0.519</td>
+					<td>0.595</td>
+					<td>0.675</td>
+					<td>0.063</td>
+					<td>1433.315</td>
+					<td style="font-weight: bold;">0.007</td>
+				</tr>
+				
+				
+				<tr>
+					<td>TAGNN</td><td>0.147</td><td>0.237</td><td>0.243</td><td>0.147</td><td>0.456</td><td>0.545</td><td>0.547</td><td>0.084</td><td>1601.208</td><td style="text-decoration: underline;">0.009</td>
+				</tr>
+				<tr>
+					<td>FLCSP</td><td>0.132</td><td>0.228</td><td>0.234</td><td>0.132</td><td>0.467</td><td>0.555</td><td>0.605</td><td>0.069</td><td style="font-weight: bold;">192.997</td><td>0.011</td>
+				</tr>
+
+
+                <tr>
+					<td colspan="11"><b>DIGI</b></td>
+				</tr>
+
+				<tr>
+					<td>GRU4Rec</td>
+					<td style="font-weight: bold;">0.200</td>
+					<td style="font-weight: bold;">0.306</td>
+					<td style="font-weight: bold;">0.313</td>
+					<td style="font-weight: bold;">0.200</td>
+					<td style="font-weight: bold;">0.553</td>
+					<td style="font-weight: bold;">0.650</td>
+					<td style="font-weight: bold;">0.944</td>
+					<td>0.070</td>
+					<td style="font-weight: bold;">905.804</td>
+					<td>0.020</td>
+				</tr>
+
+				<tr>
+					<td>COTREC</td>
+					<td style="text-decoration: underline;">0.191</td>
+					<td>0.260</td>
+					<td>0.267</td>
+					<td style="text-decoration: underline;">0.191</td>
+					<td>0.449</td>
+					<td>0.551</td>
+					<td>0.911</td>
+					<td>0.076</td>
+					<td>23735.940</td>
+					<td>3.870</td>
+				</tr>
+
+				<tr>
+					<td>NARM</td>
+					<td>0.183</td>
+					<td style="text-decoration: underline;">0.283</td>
+					<td style="text-decoration: underline;">0.290</td>
+					<td>0.183</td>
+					<td style="text-decoration: underline;">0.523</td>
+					<td style="text-decoration: underline;">0.626</td>
+					<td>0.917</td>
+					<td>0.083</td>
+					<td>3497.125</td>
+					<td style="text-decoration: underline;">0.011</td>
+				</tr>
+
+				<tr>
+					<td>GNRRW</td><td>0.180</td><td>0.273</td><td>0.280</td><td>0.180</td><td>0.497</td><td>0.604</td><td>0.931</td><td>0.077</td><td style="text-decoration: underline;">2410.033</td><td>0.021</td>
+				</tr>
+
+				<tr>
+					<td>STAMP</td><td>0.164</td><td>0.268</td><td>0.275</td><td>0.164</td><td>0.510</td><td>0.607</td><td style="text-decoration: underline;">0.933</td><td>0.074</td><td>5265.197</td><td>0.026</td>
+				</tr>
+				
+				<tr>
+					<td>SRGNN</td><td>0.162</td><td>0.263</td><td>0.270</td><td>0.162</td><td>0.509</td><td>0.613</td><td>0.892</td><td>0.078</td><td>12563.107</td><td>0.049</td>
+				</tr>
+				
+				<tr>
+					<td>GCEGNN</td><td></td><td>0.188</td><td>0.195</td><td></td><td>0.380</td><td>0.477</td><td>0.553</td><td style="text-decoration: underline;">0.093</td><td>70231.684</td><td></td>
+				</tr>
+
+				<tr>
+					<td>TAGNN</td><td>0.089</td><td>0.157</td><td>0.163</td><td>0.089</td><td>0.334</td><td>0.427</td><td>0.803</td><td style="font-weight: bold;">0.097</td><td>37477.768</td><td style="font-weight: bold;">0.008</td>
+				</tr>
+
+				<tr>
+					<td>FLCSP</td><td>0.077</td><td>0.145</td><td>0.153</td><td>0.077</td><td>0.335</td><td>0.443</td><td>0.749</td><td>0.071</td><td>3357.991</td><td>0.012</td>
+				</tr>
+
+
+				<tr>
+					<td colspan="11"><b>RETAIL</b></td>
+				</tr>
+
+				<tr>
+					<td>SRGNN</td>
+					<td style="font-weight: bold;">0.430</td>
+					<td style="font-weight: bold;">0.573</td>
+					<td style="font-weight: bold;">0.576</td>
+					<td style="font-weight: bold;">0.430</td>
+					<td style="font-weight: bold;">0.854</td>
+					<td style="text-decoration: underline;">0.904</td>
+					<td>0.728</td>
+					<td>0.048</td>
+					<td>16184.892</td>
+					<td>0.054</td>
+				</tr>
+
+				<tr>
+					<td style="text-decoration: underline;">STAMP</td>
+					<td style="text-decoration: underline;">0.417</td>
+					<td style="text-decoration: underline;">0.551</td>
+					<td style="text-decoration: underline;">0.556</td>
+					<td style="text-decoration: underline;">0.417</td>
+					<td style="text-decoration: underline;">0.825</td>
+					<td >0.883</td>
+					<td style="text-decoration: underline;">0.831</td>
+					<td>0.045</td>
+					<td>9352.234</td>
+					<td>0.020</td>
+				</tr>
+
+				<tr>
+					<td>TAGNN</td><td>0.382</td><td>0.507</td><td>0.512</td><td>0.382</td><td>0.766</td><td>0.838</td><td>0.681</td><td style="font-weight: bold;">0.055</td><td>23282.339</td><td style="font-weight: bold;">0.008</td>
+				</tr>
+
+				<tr>
+					<td>NARM</td><td>0.353</td><td>0.473</td><td>0.478</td><td>0.353</td><td>0.726</td><td>0.792</td><td>0.778</td><td>0.048</td><td>1435.985</td><td style="text-decoration: underline;">0.011</td>
+				</tr>
+
+				<tr>
+					<td>COTREC</td><td>0.349</td><td>0.460</td><td>0.466</td><td>0.349</td><td>0.707</td><td>0.788</td><td style="font-weight: bold;">0.832</td><td>0.038</td><td>51770.003</td><td>2.373</td>
+				</tr>
+
+				<tr>
+					<td>GNRRW</td><td>0.333</td><td>0.443</td><td>0.448</td><td>0.333</td><td>0.679</td><td>0.756</td><td>0.815</td><td>0.044</td><td style="text-decoration: underline;">1307.994</td><td>0.012</td>
+				</tr>
+
+				<tr>
+					<td>GRU4Rec</td><td>0.331</td><td>0.488</td><td>0.494</td><td>0.331</td><td style="text-decoration: underline;">0.837</td><td style="font-weight: bold;">0.920</td><td>0.820</td><td>0.041</td><td style="font-weight: bold;">492.310</td><td>0.021</td>
+				</tr>
+				
+				
+				<tr>
+					<td>GCEGNN</td><td>0.251</td><td>0.337</td><td>0.342</td><td>0.251</td><td>0.532</td><td>0.602</td><td>0.459</td><td style="text-decoration: underline;">0.052</td><td>23345.929</td><td>1.002</td>
+				</tr>
+				<tr>
+					<td>FLCSP</td><td>0.221</td><td>0.338</td><td>0.345</td><td>0.221</td><td>0.623</td><td>0.732</td><td>0.735</td><td>0.043</td><td>2450.747</td><td style="text-decoration: underline;">0.011</td>
+				</tr>
+
+			</tbody>
+		</table>
+
+		<h2>Models' performance across different session lengths (MRR@20)</h2>
+
+		<p align="justify">
+
+			We assess the influence of varying session lengths (short, medium and long) on the two most effective sequential and GNN models by using DIGI and RETAIL datasets. 
+		    Table presents the results for MRR@20. The categorization of sessions into short, medium, 
+			and long follows the guidelines discussed in a recent survey article [1]: short sessions contain  &le; 3  items, medium sessions contain more than 3 but  &le; 10 items, and 
+			long sessions consist of more than 10 items. Each category has its own challenges, see [1]. <br/>
+
+            For the DIGI dataset, GRU4Rec achieves the best results across all session categories, while its variant NARM ranks second. Among GNN models, 
+			GNRRW achieves the first position on short sessions, while, SR-GNN significantly outperforms GNRRW for the other two categories. 
+			For the RETAIL dataset, GRU4Rec outperforms all other models with a clear margin for short sessions. 
+			While, SR-GNN obtains the highest rank for medium and longer sessions. Notably, GRU4Rec and SR-GNN are pioneering models designed for session-based tasks. 
+			These models are still competitive and outperforming other complex models across all session categories. 
+
+		</p>
+
+        
+		<table class="table-bordered table-striped table-sm table-hover" style="line-height: 1.6;">
+			<thead>
+			  <tr>
+				<th>Models</th>
+				<th>Short sessions</th>
+				<th>Medium sessions</th>
+				<th>Long sessions</th>
+			  </tr>
+			</thead>
+			<tbody>
+                 
+                <tr>
+                   
+					<td colspan="4"><b>DIGI</b></td>
+
+				</tr>
+
+				<tr>
+					<td>GRU4Rec</td>
+					<td>0.284</td>
+					<td>0.314</td>
+					<td>0.349</td>
+				  </tr>
+				  <tr>
+					<td>NARM</td>
+					<td>0.276</td>
+					<td>0.290</td>
+					<td>0.310</td>
+				  </tr>
+				  <tr>
+					<td>GNRRW</td>
+					<td>0.266</td>
+					<td>0.280</td>
+					<td>0.299</td>
+				  </tr>
+				  <tr>
+					<td>SRGNN</td>
+					<td>0.254</td>
+					<td>0.273</td>
+					<td>0.286</td>
+				  </tr>
+
+				<tr>
+                   
+					<td colspan="4"><b>RETAIL</b></td>
+
+				</tr>
+
+				<tr>
+					<td>GRU4Rec</td>
+					<td>0.553</td>
+					<td>0.427</td>
+					<td>0.370</td>
+				  </tr>
+				  <tr>
+					<td>STAMP</td>
+					<td>0.599</td>
+					<td>0.507</td>
+					<td>0.467</td>
+				  </tr>
+				  <tr>
+					<td>SRGNN</td>
+					<td>0.606</td>
+					<td>0.548</td>
+					<td>0.495</td>
+				  </tr>
+				  <tr>
+					<td>TAGNN</td>
+					<td>0.540</td>
+					<td>0.489</td>
+					<td>0.419</td>
+				  </tr>
+
+
+				  <tr>
+                   
+					<td colspan="11"><b>RSC15</b></td>
+				</tr>
+
+
+				<tr>
+				  <td>GRU4Rec</td>
+				  <td>0.394</td>
+				  <td>0.301</td>
+				  <td>0.235</td>
+				</tr>
+				<tr>
+				  <td>NARM</td>
+				  <td>0.380</td>
+				  <td>0.288</td>
+				  <td>0.204</td>
+				</tr>
+				<tr>
+				  <td>GNRRW</td>
+				  <td>0.382</td>
+				  <td>0.303</td>
+				  <td>0.229</td>
+				</tr>
+				<tr>
+				  <td>SRGNN</td>
+				  <td>0.368</td>
+				  <td>0.283</td>
+				  <td>0.216</td>
+				</tr>
+
+			  </tbody>
+		  </table>
+
+
+
+		  <p align="justify">
+
+			<cite>(1) Wang, Shoujin, et al. "A survey on session-based recommender systems." ACM Computing Surveys (CSUR) 54.7 (2021): 1-38.</cite>
+		  </p>
+
+
+		  <h2>Statistical analysis based on MRR@20</h2>
+		  <p align="justify">We perform a statistical significance test by calculating session-individual metric values e.g., obtain the 
+			mean MRR values of all sessions in the test data and then use the ANOVA test to analyze whether the difference between the compared models is significant.</p>
+
+		<h4>One-way ANOVA</h4>
+		<p align="left">Null hypothesis (H<sub>0</sub>): There is no significance difference among the models' performance.
+		<br>
+		Alternative hypothesis (H<sub>1</sub>): At least one model's performance differs from others. <br>
+			
+	    Significance level = 0.05
+
+		<table class="table-bordered table-striped table-sm table-hover" style="line-height: 1.6;">
+			<thead>
+			  <tr>
+				<th>Measures</th>
+				<th>RSC15</th>
+				<th>DIGI</th>
+				<th>RETAIL</th>
+				
+			  </tr>
+			</thead>
+			<tbody>
+        
+				<tr>
+					<td>F-statistic</td>
+					<td>16.430</td>
+					<td>696.567</td> 
+					<td>867.966</td>
+				</tr>
+
+				<tr>
+					<td>P-value</td>
+					<td>1.832 × 10<sup>−24</sup></td>
+					<td>0.0</td>
+					<td>0.0</td>
+				</tr>
+				  
+			  </tbody>
+		  </table>
+
+		  <p align="left" > In all cases, the p-value is less than the significance level, indicating that at least one model's performance differs from the others. <br>
+		  Note: For all datasets, p-value closes to zero, which provides strong evidence against H<sub>0</sub>.
+
+
+		  </p>
+          
+		  <h2>Results of pairwise Tukey post-hoc tests</h2>
+		  <table class="table-bordered table-striped table-sm table-hover" style="line-height: 1.6;">
+			<thead>
+			  <tr>
+				
+				<th>Group1</th>
+				<th>Group2</th>
+				<th>Meandiff</th>
+				<th>P-adj</th>
+				<th>Lower</th>
+				<th>Upper</th>
+				<th>Reject</th>
+			  </tr>
+			</thead>
+			<tbody>
+              <tr>
+				<td colspan="7"><b>RSC15</b></td>
+			  </tr>
+              
+			  <tr><td>COTREC</td><td>FLCSP</td><td>-0.0893</td><td>0.0</td><td>-0.1262</td><td>-0.0524</td><td>True</td></tr>
+			  <tr><td>COTREC</td><td>GCEGNN</td><td>-0.0158</td><td>0.9241</td><td>-0.0526</td><td>0.0211</td><td>False</td></tr>
+			  <tr><td>COTREC</td><td>GNRRW</td><td>-0.0081</td><td>0.999</td><td>-0.045</td><td>0.0288</td><td>False</td></tr>
+			  <tr><td>COTREC</td><td>GRU4Rec</td><td>0.012</td><td>0.9847</td><td>-0.0248</td><td>0.0489</td><td>False</td></tr>
+			  <tr><td>COTREC</td><td>NARM</td><td>-0.0027</td><td>1.0</td><td>-0.0396</td><td>0.0342</td><td>False</td></tr>
+			  <tr><td>COTREC</td><td>SRGNN</td><td>-0.0507</td><td>0.0007</td><td>-0.0876</td><td>-0.0138</td><td>True</td></tr>
+			  <tr><td>COTREC</td><td>STAMP</td><td>-0.0287</td><td>0.2754</td><td>-0.0656</td><td>0.0082</td><td>False</td></tr>
+			  <tr><td>COTREC</td><td>TAGNN</td><td>-0.066</td><td>0.0</td><td>-0.1029</td><td>-0.0292</td><td>True</td></tr>
+			  <tr><td>FLCSP</td><td>GCEGNN</td><td>0.0735</td><td>0.0</td><td>0.0366</td><td>0.1104</td><td>True</td></tr>
+			  <tr><td>FLCSP</td><td>GNRRW</td><td>0.0812</td><td>0.0</td><td>0.0443</td><td>0.118</td><td>True</td></tr>
+			  <tr style="font-weight: bold; color: blue;"><td>FLCSP</td><td>GRU4Rec</td><td>0.1013</td><td>0.0</td><td>0.0644</td><td>0.1382</td><td>True</td></tr>
+			  <tr><td>FLCSP</td><td>NARM</td><td>0.0866</td><td>0.0</td><td>0.0497</td><td>0.1235</td><td>True</td></tr>
+			  <tr><td>FLCSP</td><td>SRGNN</td><td>0.0386</td><td>0.0321</td><td>0.0017</td><td>0.0755</td><td>True</td></tr>
+			  <tr><td>FLCSP</td><td>STAMP</td><td>0.0606</td><td>0.0</td><td>0.0237</td><td>0.0974</td><td>True</td></tr>
+			  <tr><td>FLCSP</td><td>TAGNN</td><td>0.0232</td><td>0.5761</td><td>-0.0137</td><td>0.0601</td><td>False</td></tr>
+			  <tr><td>GCEGNN</td><td>GNRRW</td><td>0.0076</td><td>0.9994</td><td>-0.0293</td><td>0.0445</td><td>False</td></tr>
+			  <tr><td>GCEGNN</td><td>GRU4Rec</td><td>0.0278</td><td>0.319</td><td>-0.0091</td><td>0.0647</td><td>False</td></tr>
+			  <tr><td>GCEGNN</td><td>NARM</td><td>0.0131</td><td>0.9746</td><td>-0.0238</td><td>0.0499</td><td>False</td></tr>
+			  <tr><td>GCEGNN</td><td>SRGNN</td><td>-0.0349</td><td>0.0801</td><td>-0.0718</td><td>0.002</td><td>False</td></tr>
+			  <tr><td>GCEGNN</td><td>STAMP</td><td>-0.013</td><td>0.9758</td><td>-0.0498</td><td>0.0239</td><td>False</td></tr>
+			  <tr><td>GCEGNN</td><td>TAGNN</td><td>-0.0503</td><td>0.0008</td><td>-0.0872</td><td>-0.0134</td><td>True</td></tr>
+			  <tr><td>GNRRW</td><td>GRU4Rec</td><td>0.0202</td><td>0.749</td><td>-0.0167</td><td>0.0571</td><td>False</td></tr>
+			  <tr><td>GNRRW</td><td>NARM</td><td>0.0054</td><td>1.0</td><td>-0.0315</td><td>0.0423</td><td>False</td></tr>
+			  <tr><td>GNRRW</td><td>SRGNN</td><td>-0.0426</td><td>0.0104</td><td>-0.0794</td><td>-0.0057</td><td>True</td></tr>
+			  <tr><td>GNRRW</td><td>STAMP</td><td>-0.0206</td><td>0.7266</td><td>-0.0575</td><td>0.0163</td><td>False</td></tr>
+			  <tr><td>GNRRW</td><td>TAGNN</td><td>-0.0579</td><td>0.0</td><td>-0.0948</td><td>-0.021</td><td>True</td></tr>
+			  <tr><td>GRU4Rec</td><td>NARM</td><td>-0.0147</td><td>0.9478</td><td>-0.0516</td><td>0.0221</td><td>False</td></tr>
+			  <tr style="font-weight: bold; color: blue;"><td>GRU4Rec</td><td>SRGNN</td><td>-0.0627</td><td>0.0</td><td>-0.0996</td><td>-0.0258</td><td>True</td></tr>
+			  <tr style="font-weight: bold; color: blue;"><td>GRU4Rec</td><td>STAMP</td><td>-0.0408</td><td>0.0177</td><td>-0.0776</td><td>-0.0039</td><td>True</td></tr>
+			  <tr style="font-weight: bold; color: blue;"><td>GRU4Rec</td><td>TAGNN</td><td>-0.0781</td><td>0.0</td><td>-0.115</td><td>-0.0412</td><td>True</td></tr>
+			  <tr><td>NARM</td><td>SRGNN</td><td>-0.048</td><td>0.0018</td><td>-0.0849</td><td>-0.0111</td><td>True</td></tr>
+			  <tr><td>NARM</td><td>STAMP</td><td>-0.026</td><td>0.4127</td><td>-0.0629</td><td>0.0109</td><td>False</td></tr>
+			  <tr><td>NARM</td><td>TAGNN</td><td>-0.0634</td><td>0.0</td><td>-0.1002</td><td>-0.0265</td><td>True</td></tr>
+			  <tr><td>SRGNN</td><td>STAMP</td><td>0.022</td><td>0.6505</td><td>-0.0149</td><td>0.0588</td><td>False</td></tr>
+			  <tr><td>SRGNN</td><td>TAGNN</td><td>-0.0154</td><td>0.9336</td><td>-0.0523</td><td>0.0215</td><td>False</td></tr>
+			  <tr><td>STAMP</td><td>TAGNN</td><td>-0.0373</td><td>0.0446</td><td>-0.0742</td><td>-0.0005</td><td>True</td></tr>
+
+			  <tr>
+				<td colspan="7"><b>DIGI</b></td>
+			  </tr>
+
+			  <tr><td>COTREC</td><td>FLCSP</td><td>-0.079</td><td>0.0</td><td>-0.0873</td><td>-0.0707</td><td>True</td></tr>
+			  <tr><td>COTREC</td><td>GCEGNN</td><td>-0.0548</td><td>0.0</td><td>-0.0631</td><td>-0.0465</td><td>True</td></tr>
+			  <tr><td>COTREC</td><td>GNRRW</td><td>0.0229</td><td>0.0</td><td>0.0146</td><td>0.0313</td><td>True</td></tr>
+			  <tr style="font-weight: bold; color: blue;"><td>COTREC</td><td>GRU4Rec</td><td>0.0463</td><td>0.0</td><td>0.0379</td><td>0.0546</td><td>True</td></tr>
+			  <tr><td>COTREC</td><td>NARM</td><td>0.033</td><td>0.0</td><td>0.0247</td><td>0.0413</td><td>True</td></tr>
+			  <tr><td>COTREC</td><td>SRGNN</td><td>0.0126</td><td>0.0001</td><td>0.0043</td><td>0.0209</td><td>True</td></tr>
+			  <tr><td>COTREC</td><td>STAMP</td><td>0.0149</td><td>0.0</td><td>0.0066</td><td>0.0232</td><td>True</td></tr>
+			  <tr><td>COTREC</td><td>TAGNN</td><td>-0.087</td><td>0.0</td><td>-0.0953</td><td>-0.0787</td><td>True</td></tr>
+			  <tr><td>FLCSP</td><td>GCEGNN</td><td>0.0243</td><td>0.0</td><td>0.0159</td><td>0.0326</td><td>True</td></tr>
+			  <tr><td>FLCSP</td><td>GNRRW</td><td>0.102</td><td>0.0</td><td>0.0936</td><td>0.1103</td><td>True</td></tr>
+			  <tr style="font-weight: bold; color: blue;"><td>FLCSP</td><td>GRU4Rec</td><td>0.1253</td><td>0.0</td><td>0.117</td><td>0.1336</td><td>True</td></tr>
+			  <tr><td>FLCSP</td><td>NARM</td><td>0.112</td><td>0.0</td><td>0.1037</td><td>0.1203</td><td>True</td></tr>
+			  <tr><td>FLCSP</td><td>SRGNN</td><td>0.0916</td><td>0.0</td><td>0.0833</td><td>0.0999</td><td>True</td></tr>
+			  <tr><td>FLCSP</td><td>STAMP</td><td>0.0939</td><td>0.0</td><td>0.0856</td><td>0.1022</td><td>True</td></tr>
+			  <tr><td>FLCSP</td><td>TAGNN</td><td>-0.008</td><td>0.0717</td><td>-0.0163</td><td>0.0003</td><td>False</td></tr>
+			  <tr><td>GCEGNN</td><td>GNRRW</td><td>0.0777</td><td>0.0</td><td>0.0694</td><td>0.086</td><td>True</td></tr>
+			  <tr style="font-weight: bold; color: blue;"><td>GCEGNN</td><td>GRU4Rec</td><td>0.101</td><td>0.0</td><td>0.0927</td><td>0.1093</td><td>True</td></tr>
+			  <tr><td>GCEGNN</td><td>NARM</td><td>0.0877</td><td>0.0</td><td>0.0794</td><td>0.0961</td><td>True</td></tr>
+			  <tr><td>GCEGNN</td><td>SRGNN</td><td>0.0674</td><td>0.0</td><td>0.059</td><td>0.0757</td><td>True</td></tr>
+			  <tr><td>GCEGNN</td><td>STAMP</td><td>0.0697</td><td>0.0</td><td>0.0614</td><td>0.078</td><td>True</td></tr>
+			  <tr><td>GCEGNN</td><td>TAGNN</td><td>-0.0322</td><td>0.0</td><td>-0.0405</td><td>-0.0239</td><td>True</td></tr>
+			  <tr style="font-weight: bold; color: blue;"><td>GNRRW</td><td>GRU4Rec</td><td>0.0233</td><td>0.0</td><td>0.015</td><td>0.0316</td><td>True</td></tr>
+			  <tr><td>GNRRW</td><td>NARM</td><td>0.01</td><td>0.0057</td><td>0.0017</td><td>0.0183</td><td>True</td></tr>
+			  <tr><td>GNRRW</td><td>SRGNN</td><td>-0.0104</td><td>0.0036</td><td>-0.0187</td><td>-0.002</td><td>True</td></tr>
+			  <tr><td>GNRRW</td><td>STAMP</td><td>-0.008</td><td>0.0682</td><td>-0.0163</td><td>0.0003</td><td>False</td></tr>
+			  <tr><td>GNRRW</td><td>TAGNN</td><td>-0.1099</td><td>0.0</td><td>-0.1183</td><td>-0.1016</td><td>True</td></tr>
+			  <tr style="font-weight: bold; color: blue;"><td>GRU4Rec</td><td>NARM</td><td>-0.0133</td><td>0.0</td><td>-0.0216</td><td>-0.005</td><td>True</td></tr>
+			  <tr style="font-weight: bold; color: blue;"><td>GRU4Rec</td><td>SRGNN</td><td>-0.0337</td><td>0.0</td><td>-0.042</td><td>-0.0254</td><td>True</td></tr>
+			  <tr style="font-weight: bold; color: blue;"><td>GRU4Rec</td><td>STAMP</td><td>-0.0314</td><td>0.0</td><td>-0.0397</td><td>-0.023</td><td>True</td></tr>
+			  <tr style="font-weight: bold; color: blue;"><td>GRU4Rec</td><td>TAGNN</td><td>-0.1333</td><td>0.0</td><td>-0.1416</td><td>-0.1249</td><td>True</td></tr>
+			  <tr><td>NARM</td><td>SRGNN</td><td>-0.0204</td><td>0.0</td><td>-0.0287</td><td>-0.0121</td><td>True</td></tr>
+			  <tr><td>NARM</td><td>STAMP</td><td>-0.0181</td><td>0.0</td><td>-0.0264</td><td>-0.0097</td><td>True</td></tr>
+			  <tr><td>NARM</td><td>TAGNN</td><td>-0.12</td><td>0.0</td><td>-0.1283</td><td>-0.1117</td><td>True</td></tr>
+			  <tr><td>SRGNN</td><td>STAMP</td><td>0.0023</td><td>0.9946</td><td>-0.006</td><td>0.0106</td><td>False</td></tr>
+			  <tr><td>SRGNN</td><td>TAGNN</td><td>-0.0996</td><td>0.0</td><td>-0.1079</td><td>-0.0913</td><td>True</td></tr>
+			  <tr><td>STAMP</td><td>TAGNN</td><td>-0.1019</td><td>0.0</td><td>-0.1102</td><td>-0.0936</td><td>True</td></tr>
+
+			  
+
+			  <tr>
+				<td colspan="7"><b>RETAIL</b></td>
+			  </tr>
+
+			  <tr><td>COTREC</td><td>FLCSP</td><td>0.0</td><td>1.0</td><td>-0.0144</td><td>0.0144</td><td>False</td></tr>
+			  <tr><td>COTREC</td><td>GCEGNN</td><td>0.003</td><td>0.9993</td><td>-0.0114</td><td>0.0175</td><td>False</td></tr>
+			  <tr><td>COTREC</td><td>GNRRW</td><td>0.1355</td><td>0.0</td><td>0.1211</td><td>0.1499</td><td>True</td></tr>
+			  <tr><td>COTREC</td><td>GRU4Rec</td><td>0.1846</td><td>0.0</td><td>0.1702</td><td>0.1991</td><td>True</td></tr>
+			  <tr><td>COTREC</td><td>NARM</td><td>0.159</td><td>0.0</td><td>0.1446</td><td>0.1734</td><td>True</td></tr>
+			  <tr style="font-weight: bold; color: blue;"><td>COTREC</td><td>SRGNN</td><td>0.2332</td><td>0.0</td><td>0.2188</td><td>0.2476</td><td>True</td></tr>
+			  <tr><td>COTREC</td><td>STAMP</td><td>0.2289</td><td>0.0</td><td>0.2145</td><td>0.2433</td><td>True</td></tr>
+			  <tr><td>COTREC</td><td>TAGNN</td><td>0.165</td><td>0.0</td><td>0.1505</td><td>0.1794</td><td>True</td></tr>
+			  <tr><td>FLCSP</td><td>GCEGNN</td><td>0.003</td><td>0.9993</td><td>-0.0114</td><td>0.0175</td><td>False</td></tr>
+			  <tr><td>FLCSP</td><td>GNRRW</td><td>0.1355</td><td>0.0</td><td>0.1211</td><td>0.1499</td><td>True</td></tr>
+			  <tr><td>FLCSP</td><td>GRU4Rec</td><td>0.1846</td><td>0.0</td><td>0.1702</td><td>0.1991</td><td>True</td></tr>
+			  <tr><td>FLCSP</td><td>NARM</td><td>0.159</td><td>0.0</td><td>0.1446</td><td>0.1734</td><td>True</td></tr>
+			  <tr style="font-weight: bold; color: blue;"><td>FLCSP</td><td>SRGNN</td><td>0.2332</td><td>0.0</td><td>0.2188</td><td>0.2476</td><td>True</td></tr>
+			  <tr><td>FLCSP</td><td>STAMP</td><td>0.2289</td><td>0.0</td><td>0.2145</td><td>0.2433</td><td>True</td></tr>
+			  <tr><td>FLCSP</td><td>TAGNN</td><td>0.165</td><td>0.0</td><td>0.1505</td><td>0.1794</td><td>True</td></tr>
+			  <tr><td>GCEGNN</td><td>GNRRW</td><td>0.1324</td><td>0.0</td><td>0.118</td><td>0.1469</td><td>True</td></tr>
+			  <tr><td>GCEGNN</td><td>GRU4Rec</td><td>0.1816</td><td>0.0</td><td>0.1672</td><td>0.196</td><td>True</td></tr>
+			  <tr><td>GCEGNN</td><td>NARM</td><td>0.156</td><td>0.0</td><td>0.1415</td><td>0.1704</td><td>True</td></tr>
+			  <tr style="font-weight: bold; color: blue;"><td>GCEGNN</td><td>SRGNN</td><td>0.2302</td><td>0.0</td><td>0.2158</td><td>0.2446</td><td>True</td></tr>
+			  <tr><td>GCEGNN</td><td>STAMP</td><td>0.2259</td><td>0.0</td><td>0.2115</td><td>0.2403</td><td>True</td></tr>
+			  <tr><td>GCEGNN</td><td>TAGNN</td><td>0.1619</td><td>0.0</td><td>0.1475</td><td>0.1763</td><td>True</td></tr>
+			  <tr><td>GNRRW</td><td>GRU4Rec</td><td>0.0492</td><td>0.0</td><td>0.0348</td><td>0.0636</td><td>True</td></tr>
+			  <tr><td>GNRRW</td><td>NARM</td><td>0.0235</td><td>0.0</td><td>0.0091</td><td>0.0379</td><td>True</td></tr>
+			  <tr style="font-weight: bold; color: blue;"><td>GNRRW</td><td>SRGNN</td><td>0.0977</td><td>0.0</td><td>0.0833</td><td>0.1122</td><td>True</td></tr>
+			  <tr><td>GNRRW</td><td>STAMP</td><td>0.0935</td><td>0.0</td><td>0.079</td><td>0.1079</td><td>True</td></tr>
+			  <tr><td>GNRRW</td><td>TAGNN</td><td>0.0295</td><td>0.0</td><td>0.0151</td><td>0.0439</td><td>True</td></tr>
+			  <tr><td>GRU4Rec</td><td>NARM</td><td>-0.0257</td><td>0.0</td><td>-0.0401</td><td>-0.0112</td><td>True</td></tr>
+			  <tr style="font-weight: bold; color: blue;"><td>GRU4Rec</td><td>SRGNN</td><td>0.0486</td><td>0.0</td><td>0.0341</td><td>0.063</td><td>True</td></tr>
+			  <tr><td>GRU4Rec</td><td>STAMP</td><td>0.0443</td><td>0.0</td><td>0.0299</td><td>0.0587</td><td>True</td></tr>
+			  <tr><td>GRU4Rec</td><td>TAGNN</td><td>-0.0197</td><td>0.0008</td><td>-0.0341</td><td>-0.0053</td><td>True</td></tr>
+			  <tr style="font-weight: bold; color: blue;"><td>NARM</td><td>SRGNN</td><td>0.0742</td><td>0.0</td><td>0.0598</td><td>0.0886</td><td>True</td></tr>
+			  <tr><td>NARM</td><td>STAMP</td><td>0.0699</td><td>0.0</td><td>0.0555</td><td>0.0844</td><td>True</td></tr>
+			  <tr><td>NARM</td><td>TAGNN</td><td>0.006</td><td>0.9362</td><td>-0.0084</td><td>0.0204</td><td>False</td></tr>
+			  <tr ><td>SRGNN</td><td>STAMP</td><td>-0.0043</td><td>0.9918</td><td>-0.0187</td><td>0.0101</td><td>False</td></tr>
+			  <tr style="font-weight: bold; color: blue;"><td>SRGNN</td><td>TAGNN</td><td>-0.0682</td><td>0.0</td><td>-0.0827</td><td>-0.0538</td><td>True</td></tr>
+			  <tr><td>STAMP</td><td>TAGNN</td><td>-0.064</td><td>0.0</td><td>-0.0784</td><td>-0.0495</td><td>True</td></tr>
+
+			</tbody>
+		  </table>
+		  
+		
+		  
+	</div>
+
+	  
+</div>	
+	
+		
+
+		

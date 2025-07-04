@@ -1,0 +1,5 @@
+	short_sessions	medium_sessions	long_sessions
+gru4rec	0.553	0.427	0.37
+stamp	0.599	0.507	0.467
+srgnn	0.606	0.548	0.495
+tagnn	0.54	0.489	0.419

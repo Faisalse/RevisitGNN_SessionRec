@@ -1,0 +1,369 @@
+
+
+<style>
+	.box {
+	  width: 1200px;        
+	  margin: 80px auto 0 auto;
+	  padding: 0px;
+	  text-align: center;
+	}
+		td {
+			border: 1px solid #ffffff;
+			padding: 12px;
+			text-align: center;
+			}
+
+		th {
+			background-color: #102E50;
+			color: #e6dcdc;
+			font-weight: bold;
+			}
+
+		tr:nth-child(even) {
+			background-color: #f9f9f9;
+			}
+
+		tr:hover {
+			background-color: #e0f7fa;
+			}
+		.table-responsive {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		}
+
+		table {
+		width: 100%;
+		border-collapse: collapse;
+		margin: 20px auto;
+		
+		color: #333;
+		min-width: 600px; /* Ensures table doesn't collapse too much on small screens */
+		}
+</style>		
+	
+        
+
+		
+		
+<div class="box">
+	<h2>How the baseline models were tuned in the six GNN-based session-based recommender systems</h2>
+	
+	<div class="table-responsive">
+		<table class="table-bordered table-striped table-sm table-hover" style="line-height: 1.6;">
+			<thead>
+				<tr>
+					<th>Titles</th>
+					<th>Is the source code shared?</th>
+					<th>Is the hyperparameter tuning strategy reported?</th>
+					<th>Are the hyperparameter ranges given?</th>
+					<th>Are the opt. hyperparameter values given per dataset?</th>
+					<th>Is the embedding size fixed?</th>
+				</tr>
+
+				
+			</thead>
+			<tbody>
+				<tr>
+					<td>Session-based Recommendation with Graph Neural Networks</td>
+					<td>No</td>
+					<td>No</td>
+					<td>No</td>
+					<td>No</td>
+					<td>Yes, 100</td>
+				  </tr>
+				  <tr>
+					<td>Global Context Enhanced Graph Neural Networks for Session-based Recommendation</td>
+					<td>No</td>
+					<td>No</td>
+					<td>No</td>
+					<td>No</td>
+					<td>Yes, 100</td>
+				  </tr>
+				  <tr>
+					<td>TAGNN: Target Attentive Graph Neural Networks for Session-based Recommendation</td>
+					<td>No</td>
+					<td>No</td>
+					<td>No</td>
+					<td>No</td>
+					<td>Yes, 100</td>
+				  </tr>
+				  <tr>
+					<td>Graph Neighborhood Routing and Random Walk for Session-based Recommendation</td>
+					<td>No</td>
+					<td>No</td>
+					<td>No</td>
+					<td>No</td>
+					<td>Yes, 100</td>
+				  </tr>
+				  <tr>
+					<td>Self-Supervised Graph Co-Training for Session-based Recommendation</td>
+					<td>No</td>
+					<td>Taken from the baseline papers</td>
+					<td>Taken from the baseline papers</td>
+					<td>Taken from the baseline papers</td>
+					<td>Yes, 100</td>
+				  </tr>
+				  <tr>
+					<td>Fusion of latent categorical prediction and sequential prediction for session-based recommendation</td>
+					<td>No</td>
+					<td>No</td>
+					<td>No</td>
+					<td>No</td>
+					<td>Yes, 100</td>
+				  </tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+
+<div class="box">
+	<h2>Used baseline models</h2>
+	
+	<div class="table-responsive">
+		<table class="table-bordered table-striped table-sm table-hover" style="line-height: 1.6;">
+			<thead>
+				<tr>
+					<th>Titles</th>
+					<th>POP</th>
+					<th>Item-KNN</th>
+					<th>BPR-MF</th>
+					<th>FPMC</th>
+					<th>GRU4Rec</th>
+					<th>NARM</th>
+					<th>STAMP</th>
+					<th>SR-GNN</th>
+					<th>CSRM</th>
+					<th>FGNN</th>
+					<th>DGTN</th>
+					<th>GCE-GNN</th>
+					<th>𝑆<sup>2</sup>-DHCN</th>
+					<th>NextItNet</th> 
+					<th>TAGNN</th> 
+				</tr>
+
+				
+			</thead>
+			<tbody>
+				<tr>
+					<td>Session-based Recommendation with Graph Neural Networks</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+				  </tr>
+
+				  <tr>
+					<td>Global Context Enhanced Graph Neural Networks for Session-based Recommendation</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10007;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+				  </tr>
+
+				  <tr>
+					<td>TAGNN: Target Attentive Graph Neural Networks for Session-based Recommendation</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+				  </tr>
+
+				  <tr>
+					<td>Graph Neighborhood Routing and Random Walk for Session-based Recommendation</td>
+					<td>&#10007;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10007;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10007;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10003;</td>
+				  </tr>
+				  
+				  <tr>
+					<td>Self-Supervised Graph Co-Training for Session-based Recommendation</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10003;</td>
+					<td>&#10007;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+				  </tr>
+
+				  <tr>
+					<td>Fusion of latent categorical prediction and sequential prediction for session-based recommendation</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10007;</td>
+					<td>&#10003;</td>
+					<td>&#10007;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+				  </tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+
+
+<div class="box">
+	<h2>Used datasets</h2>
+	
+	<div class="table-responsive">
+		<table class="table-bordered table-striped table-sm table-hover" style="line-height: 1.6;">
+			<thead>
+				<tr>
+					<th>Titles</th>
+					<th>RSC15 (1/64)</th>
+					<th>RSC15 (1/4)</th>
+					<th>Diginetica</th>
+					<th>Tmall</th>
+					<th>Nowplaying</th>
+					<th>RetailRocket</th>
+					<th>Gowalla</th>
+					<th>Last.fm</th>
+				</tr>
+
+				
+			</thead>
+			<tbody>
+				<tr>
+					<td>Session-based Recommendation with Graph Neural Networks</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					
+				  </tr>
+
+				  <tr>
+					<td>Global Context Enhanced Graph Neural Networks for Session-based Recommendation</td>
+					<td>&#10003;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+				  </tr>
+
+				  <tr>
+					<td>TAGNN: Target Attentive Graph Neural Networks for Session-based Recommendation</td>
+					<td>&#10003;</td>
+					<td>&#10007;</td>
+					<td>&#10003;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+				  </tr>
+
+				  <tr>
+					<td>Graph Neighborhood Routing and Random Walk for Session-based Recommendation</td>
+					<td>&#10003;</td>
+					<td>&#10007;</td>
+					<td>&#10003;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+				  </tr>
+				  
+				  <tr>
+					<td>Self-Supervised Graph Co-Training for Session-based Recommendation</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+					<td>&#10007;</td>
+					<td>&#10003;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+				  </tr>
+
+				  <tr>
+					<td>Fusion of latent categorical prediction and sequential prediction for session-based recommendation</td>
+					<td>&#10003;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10007;</td>
+					<td>&#10003;</td>
+					<td>&#10003;</td>
+				  </tr>
+			</tbody>
+		</table>
+	</div>
+</div>		
+		
+
+	
