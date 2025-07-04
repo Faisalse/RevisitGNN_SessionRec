@@ -70,8 +70,8 @@ The following algorithms are compared in this study
   <li>Clone the GitHub repository by using the link: <code>https://github.com/Faisalse/RevisitGNN-SessionRec.git</code>
   <li>Move into the <b>RevisitGNN-SessionRec</b> directory</li>
   
-  <li>Run the command to mount the current directory <i>RevisitGNN-SessionRec</i> to the docker container named as <i>session_rec_container</i>: <code>docker run --name session_rec_container  -it -v "$(pwd):/RevisitGNN-SessionRec" -it shefai/session_rec_graph_fusion:latest</code>. If you have the support of CUDA-capable GPUs then run the following command to attach GPUs with the container: <code>docker run --name session_rec_container  -it --gpus all -v "$(pwd):/RevisitGNN-SessionRec" -it shefai/session_rec_graph_fusion:latest</code></li> 
-<li>If you are already inside the runing container then run the command to navigate to the mounted directory <i>RevisitGNN-SessionRec</i>: <code>cd /RevisitGNN-SessionRec</code> otherwise starts the "session_rec_container" and then run the command</li>
+  <li>Run the command to mount the current directory <i>RevisitGNN-SessionRec</i> to the docker container named as <i>revisitgnn_container</i>: <code>docker run --name revisitgnn_container  -it -v "$(pwd):/RevisitGNN-SessionRec" -it shefai/session_rec_graph_fusion:latest</code>. If you have the support of CUDA-capable GPUs then run the following command to attach GPUs with the container: <code>docker run --name revisitgnn_container  -it --gpus all -v "$(pwd):/RevisitGNN-SessionRec" -it shefai/session_rec_graph_fusion:latest</code></li> 
+<li>If you are already inside the runing container then run the command to navigate to the mounted directory <i>RevisitGNN-SessionRec</i>: <code>cd /RevisitGNN-SessionRec</code> otherwise starts the "revisitgnn_container" and then run the command</li>
 <li>Copy the config file of any model from the "conf" folder and past it into "conf/in" folder, then run this command to reproduce the reported results in all tables: <code>python run_config.py conf/in conf/out</code></li>
 </ul>
 <h5>Using Anaconda</h5>
