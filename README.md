@@ -67,21 +67,21 @@ The following algorithms are compared in this study
 <ul>
   <li>Download and install Docker from <a href="https://www.docker.com/">https://www.docker.com/</a></li>
   <li>Run the following command to "pull Docker Image" from Docker Hub: <code>docker pull shefai/session_rec_graph_fusion:latest</code>
-  <li>Clone the GitHub repository by using the link: <code>https://github.com/Faisalse/RevisitGNN-SessionRec.git</code>
-  <li>Move into the <b>RevisitGNN-SessionRec</b> directory</li>
+  <li>Clone the GitHub repository by using the link: <code>https://github.com/Faisalse/RevisitGNN_SessionRec.git</code>
+  <li>Move into the <b>RevisitGNN_SessionRec</b> directory</li>
   
-  <li>Run the command to mount the current directory <i>RevisitGNN-SessionRec</i> to the docker container named as <i>revisitgnn_container</i>: <code>docker run --name revisitgnn_container  -it -v "$(pwd):/RevisitGNN-SessionRec" -it shefai/session_rec_graph_fusion:latest</code>. If you have the support of CUDA-capable GPUs then run the following command to attach GPUs with the container: <code>docker run --name revisitgnn_container  -it --gpus all -v "$(pwd):/RevisitGNN-SessionRec" -it shefai/session_rec_graph_fusion:latest</code></li> 
-<li>If you are already inside the runing container then run the command to navigate to the mounted directory <i>RevisitGNN-SessionRec</i>: <code>cd /RevisitGNN-SessionRec</code> otherwise starts the "revisitgnn_container" and then run the command</li>
+  <li>Run the command to mount the current directory <i>RevisitGNN_SessionRec</i> to the docker container named as <i>revisitgnn_container</i>: <code>docker run --name revisitgnn_container  -it -v "$(pwd):/RevisitGNN_SessionRec" -it shefai/session_rec_graph_fusion:latest</code>. If you have the support of CUDA-capable GPUs then run the following command to attach GPUs with the container: <code>docker run --name revisitgnn_container  -it --gpus all -v "$(pwd):/RevisitGNN_SessionRec" -it shefai/session_rec_graph_fusion:latest</code></li> 
+<li>If you are already inside the runing container then run the command to navigate to the mounted directory <i>RevisitGNN_SessionRec</i>: <code>cd /RevisitGNN_SessionRec</code> otherwise starts the "revisitgnn_container" and then run the command</li>
 <li>Copy the config file of any model from the "conf" folder and past it into "conf/in" folder, then run this command to reproduce the reported results in all tables: <code>python run_config.py conf/in conf/out</code></li>
 </ul>
 <h5>Using Anaconda</h5>
   <ul>
     <li>Download Anaconda from <a href="https://www.anaconda.com/">https://www.anaconda.com/</a> and install it</li>
-    <li>Clone the GitHub repository by using this link: <code>https://github.com/Faisalse/RevisitGNN-SessionRec.git</code></li>
+    <li>Clone the GitHub repository by using this link: <code>https://github.com/Faisalse/RevisitGNN_SessionRec.git</code></li>
     <li>Open the Anaconda command prompt</li>
-    <li>Move into the <b>RevisitGNN-SessionRec</b> directory</li>
-    <li>Run this command to create virtual environment: <code>conda create --name RevisitGNN-SessionRec python=3.8</code></li>
-    <li>Run this command to activate the virtual environment: <code>conda activate RevisitGNN-SessionRec</code></li>
+    <li>Move into the <b>RevisitGNN_SessionRec</b> directory</li>
+    <li>Run this command to create virtual environment: <code>conda create --name RevisitGNN_SessionRec python=3.8</code></li>
+    <li>Run this command to activate the virtual environment: <code>conda activate RevisitGNN_SessionRec</code></li>
     <li>Run this command to install the required libraries for CPU: <code>pip install -r requirements_cpu.txt</code>. However, if you have support of CUDA-capable GPUs, 
         then run this command to install the required libraries to run the experiments on GPU: <code>pip install -r requirements_gpu.txt</code></li>
     <li>Copy the config file of any model from the "conf" folder and past it into "conf/in" folder, then run this command to reproduce the reported results in all tables: <code>python run_config.py conf/in conf/out</code></li>
